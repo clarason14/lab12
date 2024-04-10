@@ -8,8 +8,8 @@ df = pd.read_csv('car_data.csv')
 filtered_df = df
 
 # Creating Sidebar Filters
-car_name = st.sidebar.text_input('Car Name')
-transmission_type = st.sidebar.multiselect('Transmission Type', options=['Manual', 'Automatic'], default=['Manual', 'Automatic'])
+car_name = st.sidebar.text_input('Input Car Name')
+transmission_type = st.sidebar.multiselect('Select Transmission Type', options=['Manual', 'Automatic'], default=['Manual', 'Automatic'])
 selling_price_range = st.sidebar.slider('Selling Price Range', 0, 20, (0, 20))
 year_range = st.sidebar.slider('Year Range', 2000, 2024, (2000, 2024))
 
