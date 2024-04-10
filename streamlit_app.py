@@ -18,14 +18,11 @@ if st.sidebar.button('Submit', key='submit1'):
     # If user inputs, filter by car name
     if car_name:
         filtered_df = filtered_df[filtered_df['Car_Name'].str.contains(car_name, case=False)]
-
     # Filter by Transmission Type
     if transmission_type:
         filtered_df = filtered_df[filtered_df['Transmission'].isin(transmission_type)]
-
     # Filter by Selling Price 
     filtered_df = filtered_df[(filtered_df['Selling_Price'] >= selling_price_range[0]) & (filtered_df['Selling_Price'] <= selling_price_range[1])]
-
     # Filter by Year 
     filtered_df = filtered_df[(filtered_df['Year'] >= year_range[0]) & (filtered_df['Year'] <= year_range[1])]
 
